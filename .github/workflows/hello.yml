@@ -1,0 +1,28 @@
+#Workflow
+#Should have a name . No indentation required on naming the workflow)
+name: Hello
+
+# on tells when the workflow should run.(# Give indentation):
+on: 
+   workflow_dispatch:  
+
+#Job
+#Should be inside the workflow
+
+# Job tells what the workflow should do, there can be one or more than one job so we write jobs.
+#Job is an object so we need an indentation.
+jobs:
+  say-hello:
+  #create an ephemeral container with ubuntu running.
+   
+  runs-on: ubuntu-latest
+  #that ephemeral container will have steps to execute, hence name those steps and use run: run has the command.
+  steps:
+  - name: Say hello to everyone
+    run: echo "Hello Dosto"
+
+#Steps
+#Should be inside the job.
+
+#Actions
+#Should be inside the steps
